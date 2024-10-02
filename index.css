@@ -1,0 +1,85 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+#menu {
+    padding-left: 10%;
+}
+
+button {
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+#logo {
+    font-weight: bold;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, rgb(199, 0, 199), rgb(10, 10, 245));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Responsive Video Container */
+.video-container {
+    position: relative;
+    width: 65%;
+    padding-bottom: 36.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Default: Hide NavBar 1 and NavBar 2 by default */
+header, nav.navbar {
+    display: none;
+}
+
+/* For larger screens: Show NavBar 1 and hide NavBar 2 */
+@media (min-width: 769px) {
+    header {
+        display: block; /* Show NavBar 1 */
+    }
+    nav.navbar {
+        display: none; /* Hide NavBar 2 */
+    }
+}
+
+/* For smaller screens: Show NavBar 2 and hide NavBar 1 */
+@media (max-width: 768px) {
+    header {
+        display: none; /* Hide NavBar 1 */
+    }
+    nav.navbar {
+        display: flex; /* Show NavBar 2 */
+    }
+    .video-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        display: none; /* Hide NavBar 1 */
+    }
+    nav.navbar {
+        display: flex; /* Show NavBar 2 */
+    }
+    .video-container {
+        width: 92%;
+    }
+}
+
